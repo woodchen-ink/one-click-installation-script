@@ -61,7 +61,7 @@
 - 如若修复后install还有问题，重启服务器解决问题
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/package.sh -o package.sh && chmod +x package.sh && bash package.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/package.sh -o package.sh && chmod +x package.sh && bash package.sh
 ```
 
 #### 一键尝试修复系统时间 
@@ -70,7 +70,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 由于系统时间不准确都是未进行时区时间同步造成的，使用chronyd进行时区时间同步后应当解决了问题
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/modify_time.sh -o modify_time.sh && chmod +x modify_time.sh && bash modify_time.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/modify_time.sh -o modify_time.sh && chmod +x modify_time.sh && bash modify_time.sh
 ```
 
 #### 一键尝试修复sudo警告
@@ -80,7 +80,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 不要在生产环境上使用该脚本，否则容易造成网络hosts配置错误，配置的host名字不在外网IP上反而在内网IP(127.0.0.1)上
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/check_sudo.sh -o check_sudo.sh && chmod +x check_sudo.sh && bash check_sudo.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/check_sudo.sh -o check_sudo.sh && chmod +x check_sudo.sh && bash check_sudo.sh
 ```
 
 #### 一键修改系统自带的journal日志记录大小释放系统盘空间
@@ -93,7 +93,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 4.以后日志的产生将受到日志文件大小，日志保留时间，日志保留等级的限制
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/resize_journal.sh -o resize_journal.sh && chmod +x resize_journal.sh && bash resize_journal.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/resize_journal.sh -o resize_journal.sh && chmod +x resize_journal.sh && bash resize_journal.sh
 ```
 
 #### 一键尝试修复网络
@@ -106,7 +106,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 尝试修复为IP类型对应的网络优先级(默认IPV4类型，纯V6类型再替换为IPV6类型)
 
 ```bash
-curl -L https://cdn.spiritlhl.workers.dev/https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/network.sh -o network.sh && chmod +x network.sh && bash network.sh
+curl -L https://cdn.spiritlhl.workers.dev/https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/network.sh -o network.sh && chmod +x network.sh && bash network.sh
 ```
 
 如果是纯V6的也可以不使用上面脚本的nat64，使用warp添加V4网络
@@ -126,7 +126,7 @@ sudo sed -i 's/.*precedence ::ffff:0:0\/96.*/precedence ::ffff:0:0\/96  100/g' /
 #### 一键解除进程数限制
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/repair_scripts/unlimit.sh -o unlimit.sh && chmod +x unlimit.sh && bash unlimit.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/repair_scripts/unlimit.sh -o unlimit.sh && chmod +x unlimit.sh && bash unlimit.sh
 ```
 
 ## 一键环境安装脚本
@@ -151,7 +151,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 原始用途是方便快捷的在按小时计费的超大型服务器上部署python环境进行科学计算，充分利用时间别浪费在构建环境上。
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/jupyter.sh -o jupyter.sh && chmod +x jupyter.sh && bash jupyter.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/jupyter.sh -o jupyter.sh && chmod +x jupyter.sh && bash jupyter.sh
 ```
 
 #### 一键安装R语言环境
@@ -162,7 +162,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 可能支持的系统(未验证)：centos 7+，Fedora，Almalinux 8.5+
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/R.sh -o R.sh && chmod +x R.sh && bash R.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/R.sh -o R.sh && chmod +x R.sh && bash R.sh
 ```
 
 #### 一键安装rust环境 
@@ -171,7 +171,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 加载官方脚本安装，前置条件适配系统以及后置条件判断安装的版本
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/rust.sh -o rust.sh && chmod +x rust.sh && bash rust.sh 
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/rust.sh -o rust.sh && chmod +x rust.sh && bash rust.sh 
 ```
 
 #### 一键安装C环境
@@ -181,7 +181,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 如果未安装则安装，如果有安装则提示升级
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/cplusplus.sh -o cplusplus.sh && chmod +x cplusplus.sh && bash cplusplus.sh 
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/cplusplus.sh -o cplusplus.sh && chmod +x cplusplus.sh && bash cplusplus.sh 
 ```
 
 #### 一键安装vnstat环境
@@ -190,7 +190,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 加载官方文件编译安装，前置条件适配系统以及后置条件判断安装的版本
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/vnstat.sh -o vnstat.sh && chmod +x vnstat.sh && bash vnstat.sh 
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/vnstat.sh -o vnstat.sh && chmod +x vnstat.sh && bash vnstat.sh 
 ```
 
 #### 一键升级低版本debian为debian11
@@ -200,7 +200,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 升级是一个版本迭代一个版本，所以如果版本低，每执行一次升级一个版本，直至升级到debian11
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/todebian11.sh -o todebian11.sh && chmod +x todebian11.sh && bash todebian11.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/todebian11.sh -o todebian11.sh && chmod +x todebian11.sh && bash todebian11.sh
 ```
 
 #### 一键升级低版本ubuntu为ubuntu22
@@ -210,7 +210,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 升级是一个版本迭代一个版本，所以如果版本低，每执行一次升级一个版本，直至升级到ubuntu22
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/toubuntu22.sh -o toubuntu22.sh && chmod +x toubuntu22.sh && bash toubuntu22.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/toubuntu22.sh -o toubuntu22.sh && chmod +x toubuntu22.sh && bash toubuntu22.sh
 ```
 
 #### 一键安装zipline平台
@@ -224,7 +224,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 反向代理如若已设置成功，还需要在面板设置中填写域名，绑定启用
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/zipline.sh -o zipline.sh && chmod +x zipline.sh && bash zipline.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/zipline.sh -o zipline.sh && chmod +x zipline.sh && bash zipline.sh
 ```
 
 如果需要删除0字节文件，打开```/root/zipline```文件夹，执行
@@ -242,7 +242,7 @@ docker-compose exec zipline yarn scripts:clear-zero-byte
 - 如果本地有启用IPV6优先级可能绑定到V6去了，使用```lsof -i:3030```查看绑定情况，切换优先级后再安装就正常了
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/filebrowser.sh -o filebrowser.sh && chmod +x filebrowser.sh && bash filebrowser.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/filebrowser.sh -o filebrowser.sh && chmod +x filebrowser.sh && bash filebrowser.sh
 ```
 
 #### 一键删除平台监控
@@ -251,7 +251,7 @@ curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-scri
 - 涵盖阿里云、腾讯云、华为云、UCLOUD、甲骨文云、京东云
 
 ```bash
-curl -L https://raw.githubusercontent.com/spiritLHLS/one-click-installation-script/main/install_scripts/dlm.sh -o dlm.sh && chmod +x dlm.sh && bash dlm.sh
+curl -L https://raw.githubusercontent.com/woodchen-ink/one-click-installation-script/main/install_scripts/dlm.sh -o dlm.sh && chmod +x dlm.sh && bash dlm.sh
 ```
 
 ## 部分手动命令
